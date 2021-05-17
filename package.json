@@ -1,0 +1,19 @@
+{
+  "name": "merng",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.24.0",
+    "graphql": "^15.5.0",
+    "mongoose": "^5.12.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "description": ""
+}
