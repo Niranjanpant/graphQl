@@ -7,11 +7,15 @@ const resolvers = require("./graphql/resolvers/index");
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: ({ req }) => ({
+    req,
+  }),
 });
 
 mongoose
-  .connect(MONGODB_URL, { useNewUrlParser: true })
+  .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
+    console.log("Connected with data base");
     return server.listen({ port: 3000 });
   })
 
